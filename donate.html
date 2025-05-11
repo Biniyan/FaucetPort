@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1A1A2E;
+      color: #D3D3D3;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1f2937;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00e5d4;
+      text-shadow: 0 0 8px #00e5d4;
+    }
+
+    .logo img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00e5d4;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: #00e5d4;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1f2937;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        display: none;
+        padding: 1rem 2rem;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .donation-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .switch-btn {
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .donation-box {
+        width: 100%;
+      }
+
+      .qr-placeholder {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 100px);
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .donation-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1e293b;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+      gap: 1rem;
+    }
+
+    .switch-btn {
+      background-color: transparent;
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .switch-btn:hover {
+      background-color: #38bdf8;
+      color: #0f172a;
+    }
+
+    .donation-box {
+      text-align: center;
+      width: 280px;
+    }
+
+    .qr-placeholder {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1rem;
+      border: 2px dashed #38bdf8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #qrImage {
+      max-width: 100%;
+      max-height: 100%;
+      display: none;
+      border-radius: 8px;
+    }
+
+    .chain-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 0.25rem;
+    }
+
+    .wallet-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .wallet-address {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .copy-container {
+      position: relative;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      color: #38bdf8;
+      cursor: pointer;
+    }
+
+    .copy-btn svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .copy-btn:hover svg {
+      transform: scale(1.1);
+    }
+
+    .copied-tooltip {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      background-color: #10b981;
+      color: #0f172a;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .copied-tooltip.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .donation-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      background-color: #12161f;
+      color: #e0e0e0;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #2a2f3a;
+      margin-top: 60px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      width: 50px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 600;
+      color: #00c2ff;
+      margin-bottom: 8px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #b0b0b0;
+    }
+
+    .footer-donation {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .footer-donation a {
+      color: #00c2ff;
+      text-decoration: none;
+    }
+
+    .footer-donation a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/faucetport.png" alt="Logo" />
+      FaucetPort
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="Contact-Us.html">Contact-Us</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="donation-container">
+      <div class="donation-box">
+        <div class="qr-placeholder">
+          <img id="qrImage" src="" alt="QR Code" />
+        </div>
+
+        <div class="chain-name" id="chainName">Ethereum</div>
+
+        <div class="wallet-container">
+          <div class="wallet-address" id="walletAddress">0x1234...abcd5678ef90</div>
+          <div class="copy-container">
+            <button class="copy-btn" onclick="copyAddress()" aria-label="Copy Address">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+            <div class="copied-tooltip" id="copiedMsg">Copied!</div>
+          </div>
+        </div>
+
+        <div class="donation-desc" id="chainDesc">
+          Donate ETH to support our mission and development efforts.
+        </div>
+
+        <div class="button-container">
+          <button class="switch-btn" onclick="prevChain()">←</button>
+          <button class="switch-btn" onclick="nextChain()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chains = [
+      {
+        name: 'EVM',
+        address: '0x737fdd6f08056c4b7ea67b6d2f609d75728ec6a5',
+        desc: 'Donate EVM coins/tokens to support our mission and development efforts.',
+        qrImage: 'images/eth.png'
+      },
+      
+      {
+        name: 'Solana',
+        address: '86KyaucbE9BvwivjvVgEFvmnPaq2NGAa2BKfzyHGWomY',
+        desc: 'Donate Solana coins/tokens to support our mission and development efforts.',
+        qrImage: 'images/sol.png'
+      },
+      {
+        name: 'Aptos',
+        address: '0xbe96caa42c8cd15da1c0642394a3fa13cdb86863664ca494262d77b20c0342f8',
+        desc: 'Donate Aptos coins/tokens to support our mission and development efforts.',
+        qrImage: 'images/aptos.png'
+      },
+      {
+        name: 'Sui',
+        address: '0xa79f949a5c97a169be7c9eb60b00768b780a9cec4ed6cb640fe8ae86cebccad9',
+        desc: 'Donate SUI coins/tokens to support our mission and development efforts.',
+        qrImage: 'images/sui.png'
+      },
+      {
+        name: 'Bitcoin Taproot',
+        address: 'bc1ppvedl3hjah06e80httmq8t7xzdv50mq83q7uw8pcrwptv3u5mvcq03clul',
+        desc: 'Donate BTC (Taproot) to support our mission and development efforts.',
+        qrImage: 'images/btc.png'
+      },
+      {
+        name: 'TON',
+        address: 'UQDxjbDpvk3Uj1xhIjaCIhCMdS9nKiXJntvqAOYtrDBbAxMz',
+        desc: 'Donate TON tokens to support our mission and development efforts.',
+        qrImage: 'images/ton.png'
+      }
+    ];
+
+    let current = 0;
+
+    function truncate(addr) {
+      return addr.slice(0, 6) + '...' + addr.slice(-8);
+    }
+
+    function updateView() {
+      const chain = chains[current];
+      document.getElementById('chainName').textContent = chain.name;
+      document.getElementById('walletAddress').textContent = truncate(chain.address);
+      document.getElementById('chainDesc').textContent = chain.desc;
+
+      const qrImage = document.getElementById('qrImage');
+      qrImage.src = chain.qrImage;
+      qrImage.style.display = 'block';
+    }
+
+    function copyAddress() {
+      const address = chains[current].address;
+      navigator.clipboard.writeText(address).then(() => {
+        const tooltip = document.getElementById('copiedMsg');
+        tooltip.classList.add('show');
+        setTimeout(() => tooltip.classList.remove('show'), 1500);
+      });
+    }
+
+    function prevChain() {
+      current = (current - 1 + chains.length) % chains.length;
+      updateView();
+    }
+
+    function nextChain() {
+      current = (current + 1) % chains.length;
+      updateView();
+    }
+
+    updateView();
+  </script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="images/faucetport.png" alt="FaucetPort Logo" class="footer-logo" />
+      <p class="footer-brand">FaucetPort</p>
+      <p class="footer-text">Made with ❤️ for developers and explorers.</p>
+      <p class="footer-copy">© 2025 FaucetPort. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

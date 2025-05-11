@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FaucetPort</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="expand.css"> <!-- Moved from second head -->
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/faucetport.png" alt="Logo" />
+    FaucetPort
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="Contact-Us.html">Contact-Us</a>
+  </nav>
+</header>
+
+  
+  <div class="hero">
+    <h1>One Dashboard. All Testnet Faucets.</h1>
+    <p>Find and access reliable, updated faucets for every major blockchain testnet in one place.</p>
+  </div>
+
+  <div class="search-container">
+  <input type="text" id="search" placeholder="Search for a network..." />
+</div>
+
+<div id="no-results" style="display: none; text-align: center; color: gray; margin-top: 20px;">
+  No matching networks found.
+</div>
+
+  
+
+
+  
+
+
+
+
+
+
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faucet Card</title>
+  <link rel="stylesheet" href="expand.css">
+</head>
+<body>
+ 
+
+  <div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/sepolia.png" alt="Logo" class="logo">
+    <div class="title-group">
+      <h2>Sepolia Testnet Faucets</h2>
+      <p>Use Sepolia faucets to develop and test Ethereum-based applications. Get free ETH for Sepolia testnet transactions.</p>
+
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/google.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Google Cloud</h3>
+        <a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank">https://cloud.google.com/.../sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://cloud.google.com/application/web3/faucet/ethereum/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Alchemy</h3>
+        <a href="https://www.alchemy.com/faucets/ethereum-sepolia" target="_blank">https://www.alchemy.com/.../sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/ethereum-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Chainlink</h3>
+        <a href="https://faucets.chain.link/sepolia" target="_blank">https://faucets.chain.link/sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Quicknode</h3>
+        <a href="https://faucet.quicknode.com/ethereum/sepolia" target="_blank">https://faucet.quicknode.com/.../sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/ethereum/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/infura.png" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Infura</h3>
+        <a href="https://www.infura.io/zh/faucet/sepolia" target="_blank">https://www.infura.io/zh/.../sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.infura.io/zh/faucet/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainstack-logo-white.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Chainstack</h3>
+        <a href="https://faucet.chainstack.com/sepolia-testnet-faucet" target="_blank">https://faucet.chainstack.com/sepolia-testnet-faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.chainstack.com/sepolia-testnet-faucet')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/getblock.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>GetBlock</h3>
+        <a href="https://getblock.io/faucet/eth-sepolia/" target="_blank">https://getblock.io/faucet/eth-sepolia/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://getblock.io/faucet/eth-sepolia/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/tatum.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Tatum</h3>
+        <a href="https://tatum.io/faucets/sepolia" target="_blank">https://tatum.io/faucets/sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://tatum.io/faucets/sepolia')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/pk90.png" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Pk90</h3>
+        <a href="https://sepolia-faucet.pk910.de/" target="_blank">https://sepolia-faucet.pk910.de/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://sepolia-faucet.pk910.de/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/sepolia.png" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Sepolia Faucet</h3>
+        <a href="https://www.sepoliafaucet.io/" target="_blank">https://www.sepoliafaucet.io/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.sepoliafaucet.io/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/rockx_official_logo.jpg" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Rock X</h3>
+        <a href="https://access.rockx.com/faucet-sepolia" target="_blank">https://access.rockx.com/faucet-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://access.rockx.com/faucet-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/sepolia.png" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Ethereum Ecosystem</h3>
+        <a href="https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia" target="_blank">https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/triangle.png" alt="Logo" class="logo">
+      <div class="source-info">
+        <h3>Triangle</h3>
+        <a href="https://faucet.triangleplatform.com/ethereum/sepolia" target="_blank">https://faucet.triangleplatform.com/ethereum/sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.triangleplatform.com/ethereum/sepolia')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/arb.jpg" alt="Arbitrum Sepolia Logo" class="logo">
+    <div class="title-group">
+      <h2>Arbitrum Sepolia Faucets</h2>
+      <p>Access testnet ETH for the Arbitrum Sepolia network from reliable sources.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Official / Most Trusted Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Alchemy Logo" class="logo">
+      <div class="source-info">
+        <h3>Alchemy</h3>
+        <a href="https://www.alchemy.com/faucets/arbitrum-sepolia" target="_blank">https://www.alchemy.com/faucets/arbitrum-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/arbitrum-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="QuickNode Logo" class="logo">
+      <div class="source-info">
+        <h3>QuickNode</h3>
+        <a href="https://faucet.quicknode.com/arbitrum/sepolia" target="_blank">https://faucet.quicknode.com/arbitrum/sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/arbitrum/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Chainlink Logo" class="logo">
+      <div class="source-info">
+        <h3>Chainlink</h3>
+        <a href="https://faucets.chain.link/arbitrum-sepolia" target="_blank">https://faucets.chain.link/arbitrum-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/arbitrum-sepolia')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/hack.jpg" alt="LearnWeb3 Logo" class="logo">
+      <div class="source-info">
+        <h3>LearnWeb3</h3>
+        <a href="https://learnweb3.io/faucets/arbitrum_sepolia/" target="_blank">https://learnweb3.io/faucets/arbitrum_sepolia/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://learnweb3.io/faucets/arbitrum_sepolia/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/bitget.png" alt="Bitbond Logo" class="logo">
+      <div class="source-info">
+        <h3>Bitbond Token Tool</h3>
+        <a href="https://tokentool.bitbond.com/faucet/arbitrum-sepolia" target="_blank">https://tokentool.bitbond.com/faucet/arbitrum-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://tokentool.bitbond.com/faucet/arbitrum-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/automata.png" alt="L2 Faucet Logo" class="logo">
+      <div class="source-info">
+        <h3>L2 Faucet (Automata)</h3>
+        <a href="https://www.l2faucet.com/arbitrum" target="_blank">https://www.l2faucet.com/arbitrum</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.l2faucet.com/arbitrum')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/getblock.jpg" alt="GetBlock Logo" class="logo">
+      <div class="source-info">
+        <h3>GetBlock</h3>
+        <a href="https://getblock.io/faucet/arb-sepolia/" target="_blank">https://getblock.io/faucet/arb-sepolia/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://getblock.io/faucet/arb-sepolia/')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/base.png" alt="Base Logo" class="logo"> <!-- Add base logo if you have -->
+    <div class="title-group">
+      <h2>Base Sepolia Faucets</h2>
+      <p>Access testnet faucets to develop and test dApps on the Base Sepolia network.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Alchemy Logo" class="logo">
+      <div class="source-info">
+        <h3>Alchemy</h3>
+        <a href="https://www.alchemy.com/faucets/base-sepolia" target="_blank">https://www.alchemy.com/.../base-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/base-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="QuickNode Logo" class="logo">
+      <div class="source-info">
+        <h3>QuickNode</h3>
+        <a href="https://faucet.quicknode.com/base/sepolia" target="_blank">https://faucet.quicknode.com/.../base-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/base/sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Chainlink Logo" class="logo">
+      <div class="source-info">
+        <h3>Chainlink</h3>
+        <a href="https://faucets.chain.link/base-sepolia" target="_blank">https://faucets.chain.link/base-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/base-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/learn3.png" alt="LearnWeb3 Logo" class="logo"> <!-- Placeholder logo -->
+      <div class="source-info">
+        <h3>LearnWeb3</h3>
+        <a href="https://learnweb3.io/faucets/base_sepolia/" target="_blank">https://learnweb3.io/faucets/base_sepolia/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://learnweb3.io/faucets/base_sepolia/')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/omni_network1712911889767.png" alt="Omni Logo" class="logo"> <!-- Placeholder -->
+      <div class="source-info">
+        <h3>Omni Network</h3>
+        <a href="https://faucet.omni.network/base-sepolia" target="_blank">https://faucet.omni.network/base-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.omni.network/base-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/sepolia.png" alt="Ethereum Ecosystem Logo" class="logo">
+      <div class="source-info">
+        <h3>Ethereum Ecosystem</h3>
+        <a href="https://www.ethereum-ecosystem.com/faucets/base-sepolia" target="_blank">https://www.ethereum-ecosystem.com/.../base-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.ethereum-ecosystem.com/faucets/base-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/automata.png" alt="Automata Logo" class="logo"> <!-- Placeholder -->
+      <div class="source-info">
+        <h3>L2 Faucet (Automata)</h3>
+        <a href="https://www.l2faucet.com/base" target="_blank">https://www.l2faucet.com/base</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.l2faucet.com/base')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/linea.png" alt="Logo" class="logo">
+    <div class="title-group">
+      <h2>Linea Testnet Faucets</h2>
+      <p>Access free testnet ETH for the Linea testnet network from official and community sources.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/metamask.jpg" alt="MetaMask" class="logo">
+      <div class="source-info">
+        <h3>MetaMask</h3>
+        <a href="https://docs.linea.build/get-started/how-to/get-testnet-eth" target="_blank">https://docs.linea.build/.../get-testnet-eth</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://docs.linea.build/get-started/how-to/get-testnet-eth')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/infura.png" alt="Infura" class="logo">
+      <div class="source-info">
+        <h3>Infura</h3>
+        <a href="https://www.infura.io/zh/faucet/linea" target="_blank">https://www.infura.io/.../linea</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.infura.io/zh/faucet/linea')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/getblock.jpg" alt="GetBlock" class="logo">
+      <div class="source-info">
+        <h3>GetBlock</h3>
+        <a href="https://getblock.io/faucet/linea-sepolia/" target="_blank">https://getblock.io/faucet/linea-sepolia/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://getblock.io/faucet/linea-sepolia/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Chainlink" class="logo">
+      <div class="source-info">
+        <h3>Chainlink</h3>
+        <a href="https://faucets.chain.link/linea-sepolia" target="_blank">https://faucets.chain.link/linea-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/linea-sepolia')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/echodex.jpg" alt="EchoDEX" class="logo">
+      <div class="source-info">
+        <h3>EchoDEX</h3>
+        <a href="https://www.testnet.echodex.io/faucet" target="_blank">https://www.testnet.echodex.io/faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.testnet.echodex.io/faucet')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/hack.jpg" alt="HackQuest" class="logo">
+      <div class="source-info">
+        <h3>HackQuest</h3>
+        <a href="https://hackquest.io/en/faucets/59141" target="_blank">https://hackquest.io/en/faucets/59141</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://hackquest.io/en/faucets/59141')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/mantle.png" alt="Logo" class="logo">
+    <div class="title-group">
+      <h2>Mantle Testnet Faucets</h2>
+      <p>Access testnet ETH on the Mantle network through official and community-supported faucet sources.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/mantle.png" alt="Mantle" class="logo">
+      <div class="source-info">
+        <h3>Mantle</h3>
+        <a href="https://faucet.testnet.mantle.xyz/" target="_blank">https://faucet.testnet.mantle.xyz/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.testnet.mantle.xyz/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="QuickNode" class="logo">
+      <div class="source-info">
+        <h3>QuickNode</h3>
+        <a href="https://faucet.quicknode.com/mantle" target="_blank">https://faucet.quicknode.com/mantle</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/mantle')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Chainlink" class="logo">
+      <div class="source-info">
+        <h3>Chainlink</h3>
+        <a href="https://faucets.chain.link/mantle-sepolia" target="_blank">https://faucets.chain.link/mantle-sepolia</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/mantle-sepolia')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/hack.jpg" alt="HackQuest" class="logo">
+      <div class="source-info">
+        <h3>HackQuest</h3>
+        <a href="https://hackquest.io/en/faucets" target="_blank">https://hackquest.io/en/faucets</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://hackquest.io/en/faucets')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="C:\Users\Dell\OneDrive\Pictures\Screenshots\Screenshot 2025-05-10 225059.png" alt="InceptThink" class="logo">
+      <div class="source-info">
+        <h3>InceptThink</h3>
+        <a href="https://www.incepthink.com/mantle/faucet" target="_blank">https://www.incepthink.com/mantle/faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.incepthink.com/mantle/faucet')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/starknet.png" alt="Starknet" class="logo">
+    <div class="title-group">
+      <h2>Starknet Sepolia Faucets</h2>
+      <p>Obtain testnet ETH and STRK on Starknet Sepolia using official and verified faucet sources.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/starknet.png" alt="Starknet Foundation" class="logo">
+      <div class="source-info">
+        <h3>Starknet Foundation</h3>
+        <a href="https://starknet-faucet.vercel.app/" target="_blank">https://starknet-faucet.vercel.app/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://starknet-faucet.vercel.app/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/starknet.png" alt="Starknet Docs" class="logo">
+      <div class="source-info">
+        <h3>Starknet Documentation</h3>
+        <a href="https://docs.starknet.io/ecosystem/open-rpc-endpoints-sepolia-faucets/" target="_blank">https://docs.starknet.io/...</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://docs.starknet.io/ecosystem/open-rpc-endpoints-sepolia-faucets/')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Alchemy" class="logo">
+      <div class="source-info">
+        <h3>Alchemy</h3>
+        <a href="https://www.alchemy.com/faucets/starknet-sepolia" target="_blank">https://www.alchemy.com/faucets/...</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/starknet-sepolia')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/learn3.png" alt="LearnWeb3" class="logo">
+      <div class="source-info">
+        <h3>LearnWeb3</h3>
+        <a href="https://learnweb3.io/faucets/starknet_sepolia/" target="_blank">https://learnweb3.io/faucets/...</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://learnweb3.io/faucets/starknet_sepolia/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/blast.png" alt="Blast API ETH" class="logo">
+      <div class="source-info">
+        <h3>Blast API – ETH</h3>
+        <a href="https://blastapi.io/faucets/starknet-sepolia-eth" target="_blank">https://blastapi.io/faucets/...eth</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://blastapi.io/faucets/starknet-sepolia-eth')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/blast.png" alt="Blast API STRK" class="logo">
+      <div class="source-info">
+        <h3>Blast API – STRK</h3>
+        <a href="https://blastapi.io/faucets/starknet-sepolia-strk" target="_blank">https://blastapi.io/faucets/...strk</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://blastapi.io/faucets/starknet-sepolia-strk')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/monad.jpg" alt="Monad" class="logo">
+    <div class="title-group">
+      <h2>Monad Testnet Faucets</h2>
+      <p>Access MON tokens on Monad Testnet through verified sources.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/monad.jpg" alt="Monad" class="logo">
+      <div class="source-info">
+        <h3>Monad Official Faucet</h3>
+        <a href="https://faucet.monad.xyz/" target="_blank">https://faucet.monad.xyz/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.monad.xyz/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/monad.jpg" alt="Monad Testnet" class="logo">
+      <div class="source-info">
+        <h3>Monad Testnet Portal</h3>
+        <a href="https://testnet.monad.xyz/" target="_blank">https://testnet.monad.xyz/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://testnet.monad.xyz/')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="QuickNode" class="logo">
+      <div class="source-info">
+        <h3>QuickNode Monad Faucet</h3>
+        <a href="https://faucet.quicknode.com/monad" target="_blank">https://faucet.quicknode.com/monad</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/monad')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/gasLogoWhite.png" alt="Gas.zip" class="logo">
+      <div class="source-info">
+        <h3>Gas.zip Monad Faucet</h3>
+        <a href="https://www.gas.zip/faucet/monad" target="_blank">https://www.gas.zip/faucet/monad</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.gas.zip/faucet/monad')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/faucettrade.jpg" alt="Faucet Trade" class="logo">
+      <div class="source-info">
+        <h3>Faucet Trade Monad</h3>
+        <a href="https://faucet.trade/monad-testnet-mon-faucet" target="_blank">https://faucet.trade/monad-testnet-mon-faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.trade/monad-testnet-mon-faucet')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Alchemy" class="logo">
+      <div class="source-info">
+        <h3>Alchemy Monad</h3>
+        <a href="https://www.alchemy.com/faucets/monad-testnet" target="_blank">https://www.alchemy.com/faucets/monad-testnet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/monad-testnet')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/sepolia.png" alt="Seismic" class="logo">
+    <div class="title-group">
+      <h2>Seismic Devnet Faucets</h2>
+      <p>Get test tokens for Seismic Devnet through official faucet links.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/sepolia.png" alt="Seismic Faucet" class="logo">
+      <div class="source-info">
+        <h3>Seismic Devnet Faucet</h3>
+        <a href="https://faucet-2.seismicdev.net/" target="_blank">https://faucet-2.seismicdev.net/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet-2.seismicdev.net/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/sepolia.png" alt="Seismic Docs" class="logo">
+      <div class="source-info">
+        <h3>Seismic Devnet Docs</h3>
+        <a href="https://docs.seismic.systems/appendix/devnet" target="_blank">https://docs.seismic.systems/appendix/devnet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://docs.seismic.systems/appendix/devnet')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/megaeth.jpg" alt="MegaETH" class="logo">
+    <div class="title-group">
+      <h2>MegaETH Testnet Faucets</h2>
+      <p>Access ETH on MegaETH Testnet through trusted faucet providers.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/megaeth.jpg" alt="MegaETH" class="logo">
+      <div class="source-info">
+        <h3>MegaETH Official Faucet</h3>
+        <a href="https://testnet.megaeth.com/" target="_blank">https://testnet.megaeth.com/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://testnet.megaeth.com/')">Visit</button>
+    </div>
+
+    <div class="section-title">Community & Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/chainlink.jpg" alt="Chainlink" class="logo">
+      <div class="source-info">
+        <h3>Chainlink MegaETH</h3>
+        <a href="https://faucets.chain.link/megaeth-testnet" target="_blank">https://faucets.chain.link/megaeth-testnet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucets.chain.link/megaeth-testnet')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/gasLogoWhite.png" alt="Gas.zip" class="logo">
+      <div class="source-info">
+        <h3>Gas.zip MegaETH</h3>
+        <a href="https://www.gas.zip/faucet/megaeth" target="_blank">https://www.gas.zip/faucet/megaeth</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.gas.zip/faucet/megaeth')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/faucettrade.jpg" alt="Faucet Trade" class="logo">
+      <div class="source-info">
+        <h3>Faucet Trade MegaETH</h3>
+        <a href="https://faucet.trade/megaeth-testnet-eth-faucet" target="_blank">https://faucet.trade/megaeth-testnet-eth-faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.trade/megaeth-testnet-eth-faucet')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <script src="script.js"></script>
+
+<div class="card">
+  <div class="card-header" onclick="toggleCard(this)">
+    <img src="images/Solana_logo.png" alt="Solana" class="logo">
+    <div class="title-group">
+      <h2>Solana Testnet Faucets</h2>
+      <p>Get free SOL for testing and development on the Solana Testnet.</p>
+    </div>
+    <div class="triangle"></div>
+  </div>
+  <div class="card-body">
+
+    <div class="section-title">Official / Most Trusted Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/Solana_logo.png" alt="Solana" class="logo">
+      <div class="source-info">
+        <h3>Solana Official Faucet</h3>
+        <a href="https://faucet.solana.com/" target="_blank">https://faucet.solana.com/</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.solana.com/')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/quick.jpg" alt="QuickNode" class="logo">
+      <div class="source-info">
+        <h3>QuickNode Solana Faucet</h3>
+        <a href="https://faucet.quicknode.com/solana/testnet" target="_blank">https://faucet.quicknode.com/solana/testnet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.quicknode.com/solana/testnet')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/alchemy.jpg" alt="Alchemy" class="logo">
+      <div class="source-info">
+        <h3>Alchemy Solana Faucet</h3>
+        <a href="https://www.alchemy.com/faucets/solana" target="_blank">https://www.alchemy.com/faucets/solana</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.alchemy.com/faucets/solana')">Visit</button>
+    </div>
+
+    <div class="section-title">Third-Party Faucets</div>
+    <div class="section-divider"></div>
+
+    <div class="source-card">
+      <img src="images/gasLogoWhite.png" alt="Gas.zip" class="logo">
+      <div class="source-info">
+        <h3>Gas.zip Solana</h3>
+        <a href="https://www.gas.zip/faucet/solana" target="_blank">https://www.gas.zip/faucet/solana</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://www.gas.zip/faucet/solana')">Visit</button>
+    </div>
+
+    <div class="source-card">
+      <img src="images/faucettrade.jpg" alt="Faucet Trade" class="logo">
+      <div class="source-info">
+        <h3>Faucet Trade Solana</h3>
+        <a href="https://faucet.trade/solana-testnet-sol-faucet" target="_blank">https://faucet.trade/solana-testnet-sol-faucet</a>
+      </div>
+      <button class="visit-btn" onclick="window.open('https://faucet.trade/solana-testnet-sol-faucet')">Visit</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('show');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+<footer class="footer">
+  <div class="footer-content">
+    <img src="images/faucetport.png" alt="FaucetPort Logo" class="footer-logo" />
+    <p class="footer-brand">FaucetPort</p>
+    <p class="footer-text">Made with ❤️ for developers and explorers.</p>
+    <p class="footer-donation">
+      Support us: <a href="donate.html">Donate</a>
+      | <a href="t&c.html">Privacy Policy</a>
+    </p>
+    <p class="footer-copy">&copy; 2025 FaucetPort. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</html>

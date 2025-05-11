@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | FaucetPort</title>
+  <link rel="stylesheet" href="Contact-Us.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+ <header>
+  <div class="logo">
+    <img src="images/faucetport.png" alt="Logo" />
+    FaucetPort
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="Contact-Us.html">Contact-Us</a>
+  </nav>
+</header>
+
+
+  <div class="container">
+    <!-- Feedback Form -->
+    <h2>We Value Your Feedback</h2>
+    <p>Help us improve FaucetPort — your thoughts matter to us.</p>
+    <form action="/submit-feedback" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="feedback" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey="6LdcAjUrAAAAAB-JQwEXcgfiiutIzdTGhdO-iL-H"></div>
+
+      <button type="submit">Send Feedback</button>
+    </form>
+
+    <!-- Bug Report Form -->
+    <h2>Report a Bug</h2>
+    <p>Found a bug? Let us know so we can squash it!</p>
+    <form action="/report-bug" method="POST">
+      <input type="text" name="bugTitle" placeholder="Bug Title" required />
+      <textarea name="bugDescription" rows="5" placeholder="Describe the issue..." required></textarea>
+
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <button type="submit">Report Bug</button>
+    </form>
+  </div>
+
+
+
+
+  <footer class="footer">
+  <div class="footer-content">
+    <img src="images/faucetport.png" alt="FaucetPort Logo" class="footer-logo" />
+    <p class="footer-brand">FaucetPort</p>
+    <p class="footer-text">Made with ❤️ for developers and explorers.</p>
+    <p class="footer-donation">
+      Support us: <a href="donate.html">Donate</a>
+      | <a href="t&c.html">Privacy Policy</a>
+    </p>
+    <p class="footer-copy">&copy; 2025 FaucetPort. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('show');
+  }
+</script>
+
+
+</body>
+</html>
